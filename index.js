@@ -12,10 +12,15 @@ function createMultiplier(val){
   return multiplierValue(val)
 }
 
-var doubler = createMultiplier(2)
 
+function multiplier(a, b){
+  return a * b;
+}
+
+var doubler = createMultiplier(2)
 var tripler = createMultiplier(3)
 
-function multiplier(multiplierValue, value){
-  return num1 * num2
-}
+var doublerWithBind = multiplier.bind(null, 2);
+var triplerWithBind = multiplier.bind(null, 3);
+
+console.log(doublerWithBind(5));
